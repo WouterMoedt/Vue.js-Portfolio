@@ -1,0 +1,71 @@
+<template>
+    <section class="bg-light page-section" id="portfolio">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading text-uppercase">Skills</h2>
+          <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 col-sm-6 portfolio-item" v-for="(obj, key) in PortfolioJSON" :key="key">
+          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
+            <div class="portfolio-hover">
+              <div class="portfolio-hover-content">
+                <i class="fas fa-plus fa-3x"></i>
+              </div>
+            </div>
+            <img class="img-fluid" src="img/portfolio/01-thumbnail.jpg" alt="">
+          </a>
+          <div class="portfolio-caption">
+            <h4>{{ obj.caption }}</h4>
+            <p class="text-muted">{{ obj.title }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</template>
+
+<script>
+export default {
+     data: () => ({
+        PortfolioJSON: [
+            {
+                img: '../img/Omaha.jpg',
+                caption: '1',
+                title: '1'
+            },
+            {
+                img: '/something/random/img/.jpg',
+                caption: '2',
+                title: '2'
+            },
+            {
+                img: '/something/random/img/.jpg',
+                caption: '3',
+                title: '3'
+            },
+            {
+                img: '/something/random/img/.jpg',
+                caption: '4',
+                title: '4'
+            },
+            {
+                img: '/something/random/img/.jpg',
+                caption: '5',
+                title: '5'
+            },
+            {
+                img: '/something/random/img/.jpg',
+                caption: '6',
+                title: '6'
+            },
+        ]
+    })
+}
+</script>
+
+<style lang="css">
+
+</style>
